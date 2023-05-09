@@ -2,9 +2,9 @@
 function App() {
 
   return (
-    <>
-      <h1>Hello Vite + React!</h1>
-    </>
+    <div className="text-7xl">
+      Hello Vite + React!
+    </div>
   )
 }
 
