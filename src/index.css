@@ -72,7 +72,8 @@ html:focus-within {
 
 .image {
   width: 100%;
-  height: 20rem;
+  height: 18rem;
+  object-fit: cover;
 }
 
 .header {
@@ -81,7 +82,7 @@ html:focus-within {
   z-index: -10;
 }
 
-.header--content {
+.header--search {
    display: flex;
    flex-direction: column;
    align-items:center;
@@ -90,54 +91,142 @@ html:focus-within {
    row-gap: 2rem;
 }
 
-.header--content h1{
+.header--search h1{
   color: white;
   font-weight: 500;
   font-size: 20px;
   letter-spacing: 1.5px;
 }
 
-.header--content form {
+.header--search form {
   display: flex;
   align-items: center;
 }
-.header--content form input {
+.header--search form input {
   border-radius: 12px 0 0 12px;
   padding: 0.5rem 0.8rem;
 }
 
-.header--content form input:focus{
+.header--search form input:focus{
   outline: none;
   border: none;
 
 }
 
-.header--content form button {
+.header--search form button {
   border-radius: 0 12px 12px 0;
   background-color: var(--Very-Dark-Gray);
   color: white;
   padding: 15.8px 1rem;
 }
 
-.header--content form button:hover {
-  background-color: var(--Dark-Gray);
+.header--search form button:hover {
+  background-color: rgb(85, 85, 85);
   transition: var(--transition);
 }
 
+
+.header--content {
+  padding: 0 4rem;
+}
+
+.header--content-wrapper {
+  background-color: white;
+  padding: 1.5rem;
+  margin: 0 auto;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.25rem;
+  text-align:center;
+}
+
+.header--content-items h2{
+ text-transform: uppercase;
+ font-size: 10px;
+ font-weight: 600;
+ color: var(--Dark-Gray);
+}
+
+.header--content-items p{
+  margin-top: 8px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+  color: var(--Very-Dark-Gray);
+}
+
+
+.header--content-last h2{
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--Dark-Gray);
+ }
+ 
+ .header--content-last p{
+   margin-top: 8px;
+   font-weight: 500;
+   letter-spacing: 0.7px;
+   color: var(--Very-Dark-Gray);
+ }
+
 @media (min-width: 1024px) {
-  .header--content {
+  .header--search {
     row-gap: 2.5rem;
   }
-  .header--content h1 {
+  .header--search h1 {
     font-size: 35px;
   }
 
-  .header--content form input {
+  .header--search form input {
     padding: 0.8rem 1.2rem;
     width: 480px;
   }
 
-  .header--content form button {
+  .header--search form button {
     padding: 20.7px 1.4rem;
   }
+
+  .header--content {
+    margin-bottom: -4rem;
+  }
+
+  .header--content-wrapper {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding: 2rem 4rem;
+    text-align: left;
+    gap: 1.5rem;
+    
+  }
+
+  .header--content-items{
+    border-right: 1.5px;
+    border-color: gray;
+    border-style: groove;
+  }
+
+  .header--content-items h2{
+    font-size: 12px;
+   }
+   
+   .header--content-items p{
+     margin-top: 12px;
+     font-size: 20px;
+     word-spacing: 5px;
+   }
+
+   .header--content-last h2{
+    font-size: 12px;
+   }
+   
+   .header--content-last p{
+     margin-top: 12px;
+     font-size: 20px;
+     word-spacing: 5px;
+   }
+
+   .image {
+    height: 16.8rem;
+  }
+
 }
