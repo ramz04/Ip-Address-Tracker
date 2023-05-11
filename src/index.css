@@ -139,6 +139,8 @@ html:focus-within {
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1.25rem;
   text-align:center;
+  z-index: 1000;
+  position: relative;
 }
 
 .header--content-items h2{
