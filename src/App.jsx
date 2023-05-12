@@ -17,7 +17,7 @@ function App() {
   useEffect(() => {
     try {
       const getInitialData = async () => {
-        const res = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${import.meta.env.VITE_API_KEY}&ipAddress=${ipAddress}`)
+        const res = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_ki1y91b0731ykqhC125KuazJSdgMx&ipAddress=${ipAddress}`)
         const data = await res.json()
         setAddress(data)
       }
@@ -31,7 +31,7 @@ function App() {
   const getEnteredData = async () => {
     const res = await fetch(
       `https://geo.ipify.org/api/v2/country,city?apiKey=
-        ${import.meta.env.VITE_API_KEY}
+      at_ki1y91b0731ykqhC125KuazJSdgMx
       &${
         checkIpAddress.test(ipAddress)
           ? `ipAddress=${ipAddress}`
@@ -97,8 +97,8 @@ function App() {
             <MapContainer 
             center={[address.location.lat, address.location.lng]} 
             zoom={13} 
-            scrollWheelZoom={true}
-            style={{ height: '100vh', width: '100vw',}}
+            scrollWheelZoom={false}
+            style={{ height: '100vh', width: '100vw'}}
             >
               <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
