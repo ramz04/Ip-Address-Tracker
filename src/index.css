@@ -77,7 +77,7 @@ html:focus-within {
 }
 
 .header {
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
   z-index: -10;
 }
@@ -86,9 +86,12 @@ html:focus-within {
    display: flex;
    flex-direction: column;
    align-items:center;
+   width: 100%;
    justify-content: center;
-   padding: 2rem 4rem;
+   padding: 2rem 3rem;
    row-gap: 2rem;
+   position: absolute;
+   top: 5px;
 }
 
 .header--search h1{
@@ -127,7 +130,7 @@ html:focus-within {
 
 
 .header--content {
-  padding: 0 4rem;
+  padding: 0 0rem;
 }
 
 .header--content-wrapper {
@@ -174,7 +177,7 @@ html:focus-within {
 
 @media (min-width: 1024px) {
   .header--search {
-    row-gap: 2.5rem;
+    row-gap: 2rem;
   }
   .header--search h1 {
     font-size: 35px;
