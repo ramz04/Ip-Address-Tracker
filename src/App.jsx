@@ -7,7 +7,6 @@ import { useState, useEffect } from 'react'
 import Markerposition from './components/Markerposition'
 
 function App() {
-
   const [address, setAddress] = useState(null)
   const [ipAddress, setIpAddress] = useState('')
   const checkIpAddress =
@@ -18,10 +17,9 @@ function App() {
   useEffect(() => {
     try {
       const getInitialData = async () => {
-        const res = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_ki1y91b0731ykqhC125KuazJSdgMx&ipAddress=${ipAddress}`)
+        const res = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${import.meta.env.VITE_API_KEY}&ipAddress=${ipAddress}`)
         const data = await res.json()
         setAddress(data)
-        console.log(data)
       }
       getInitialData()
     }
@@ -33,7 +31,7 @@ function App() {
   const getEnteredData = async () => {
     const res = await fetch(
       `https://geo.ipify.org/api/v2/country,city?apiKey=
-        at_ki1y91b0731ykqhC125KuazJSdgMx
+        ${import.meta.env.VITE_API_KEY}
       &${
         checkIpAddress.test(ipAddress)
           ? `ipAddress=${ipAddress}`
