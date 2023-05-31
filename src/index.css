@@ -88,7 +88,7 @@ html:focus-within {
    align-items:center;
    width: 100%;
    justify-content: center;
-   padding: 2rem 2.5rem;
+   padding: 2rem 1.5rem;
    row-gap: 2rem;
    position: absolute;
    top: 5px;
